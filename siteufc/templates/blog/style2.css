@@ -1,0 +1,99 @@
+/*#menuprincipal{
+	/*background-color: red;
+	/*text-align : center;
+	width: 1000px;
+	height: 80%;
+	
+}
+/*
+#menuprincipal li {
+    display: inline;
+    /*list-style-type: none;//
+	font-size: 1.0em;
+	height: 80px;
+	}
+	
+nav{
+	/*width:100px;//	
+}
+
+
+mark
+{
+background-color: black;
+color: white; 
+}
+
+#clock{
+	font: bold 24pt sans;
+	background: #ddf; 
+	padding: 10px;
+	border: solid black 2px; /* bordure noir de 2px //
+	border-radius: 10px;/* angle arrondis //
+}
+/*
+#menu{
+	font: bold 24pt sans;
+	background: #ddf; 
+	padding: 10px;
+	border: solid black 2px; 
+	border-radius: 10px;
+	
+}
+//
+
+span {
+	display:none;
+}*/
+
+ul{
+	padding: 0;
+	margin: 0;
+	background-color: red;
+	color: white;
+	list-style:none;
+}
+
+li{
+	float:left;
+	position:relative;
+	width:10em;
+	background-color: red;
+}
+
+li ul{
+	display:none;
+	position:absolute;
+	top: 1em;
+	left:0;
+}
+li>ul{
+	top:auto;
+	left:auto;
+}
+
+
+li:hover ul { display: block; }
+/*li:hover ul { display: block; }*/
+mark
+{
+background-color: red;
+color: white; 
+}
+
+#contenu
+{
+background-color: rgb(189,199,199); /*couleur du fond du site grise*/
+background-repeat: repeat;
+background-position: 30px 50px;	
+}
+
+a:link
+{
+	text-decoration:none;
+}
+
+#menuprincipal a.active, #MenuHorizontal a:hover {
+    color: brown; /* couleur quand l'on passe sur les onglets du menu*/
+    /*background: url(ohh.gif) no-repeat bottom center;*/ /*onglet_pyra.gif*/
+    }
