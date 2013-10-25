@@ -5,8 +5,8 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^blog/',include('blog.urls')),
-
+    url(r'^',include('blog.urls')),
+    url(r'^comments/',include('comments.urls')),
     # Examples:
     # url(r'^$', 'siteufc.views.home', name='home'),
     # url(r'^siteufc/', include('siteufc.foo.urls')),
@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+
 )
