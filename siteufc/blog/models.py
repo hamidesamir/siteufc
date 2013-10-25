@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from django.db import models
 
 class Article(models.Model):
@@ -6,5 +7,5 @@ class Article(models.Model):
 	contenu = models.TextField(null=True)
 	date = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Date parution")
 
-def _unicode_(self):
+def __unicode__(self):
  return u"%s" % self.titre
