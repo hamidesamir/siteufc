@@ -4,11 +4,11 @@
    <HEAD>
 	<meta charset="utf-8" />
 	<TITLE>UFC Projet Web</TITLE> <!--titre de l'onglet du navigateur-->
-	<link rel="stylesheet" href="/assets/style2.css"/>
-	<script src="clock.js"></script> 
+	<link rel="stylesheet" href="/assets/style2.css"/> 
    </HEAD>
 
-<body id = "contenu">
+ <hgroup id = "fond-blanc">
+  <body id = "contenu">
 	<header>
 		<div id="menuprincipal">
 			<nav>
@@ -41,25 +41,11 @@
 			</nav>			
 		</div>
 	</header>
-	<!-- balise de l'horloge numérique -->
-	<span id="clock"></span>
 	
 	<!-- page d'accueil -->
 	<section id="actu">
-		<h1>Les dernières actualités sur l'UFC</h1>
-		<article>
-		    <h1>L'actualité</h1>
-		    <p>Sur ce site vous trouverez du contenu sur la plus grosse compétition de MMA</p>
-		</article>
-	</section>
-	
-	
-	<!-- page sur les combattants -->
-	<section id="les-combattants">
-		<article>
-	    <h1>Les combattants</h1>
-	    <p>Toutes les catégories de combattants</p>
-		</article>
+		<h1>{% block title %} Titre {% endblock %}</h1>
+		{% block content %} Content {% endblock %}
 	</section>
 	
 	<!-- le bas de page-->
@@ -68,5 +54,6 @@
 		<p>Vous pouvez nous laisser vos commentaires dans cette section</p>
 		<p>Bugs? Suggestions? Vous trouverez ici comment nous contacter !</p>
 	</footer>
-</body>
+  </body>
+ </hgroup>
 </HTML>	

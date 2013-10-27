@@ -46,6 +46,38 @@ span {
 	display:none;
 }*/
 
+body{
+	margin: 12px 0px 12px 0px;
+	background-color: white;
+	background-image:linear-gradient(top, #9fc6d4, white);
+	background-image:-moz-linear-gradient(top, #9fc6d4, white);
+	background-image:-o-linear-gradient(top, #9fc6d4, white);
+	background-image:-ms-linear-gradient(top, #9fc6d4, white);
+	background-image:-webkit-linear-gradient(top, #9fc6d4, white);
+
+}
+
+#fond-blanc{
+	background-color: #5a9fdb;
+	padding: 2px 20px 2px 20px;
+	margin: auto;
+	width: 900px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	box-shadow: 5px 5px 5px black;
+	-moz-box-shadow: 5px 5px 5px black;
+	-webkit-box-shadow: 5px 5px 5px black;
+	-o-box-shadow: 5px 5px 5px black;	
+	-ms-box-shadow: 5px 5px 5px black;
+	border: 1px solid;
+
+
+}
+
+
 ul{
 	padding: 0;
 	margin: 0;
@@ -54,11 +86,13 @@ ul{
 	list-style:none;
 }
 
+
 li{
 	float:left;
 	position:relative;
 	width:10em;
 	background-color: red;
+	text-align: center;
 }
 
 li ul{
@@ -80,13 +114,14 @@ mark
 background-color: red;
 color: white; 
 }
-
+/*
 #contenu
 {
-background-color: rgb(189,199,199); /*couleur du fond du site grise*/
+background-color: rgb(189,199,199); couleur du fond du site grise
 background-repeat: repeat;
 background-position: 30px 50px;	
 }
+*/
 
 a:link
 {

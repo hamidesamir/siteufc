@@ -7,7 +7,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     url(r'^',include('blog.urls')),
-    url(r'^comments/',include('comments.urls')),
 
     # Examples:
     # url(r'^$', 'siteufc.views.home', name='home'),

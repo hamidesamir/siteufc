@@ -7,5 +7,5 @@ class Article(models.Model):
 	contenu = models.TextField(null=True)
 	date = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Date parution")
 
-def __unicode__(self):
- return u"%s" % self.titre
+	def __unicode__(self):
+ 	  return u"%s" % self.titre
