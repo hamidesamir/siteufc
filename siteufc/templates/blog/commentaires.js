@@ -1,7 +1,7 @@
 var commentaires = document.getElementById("commentaire");
-inputMotDePass.addEventListener("keyup",commentaire);
+commentaires.addEventListener("keyup",comment);
 
-function commentaires(){
+function comment(){
 							if (commentaires.value.length>6) {
 								alert("time to comment");
 							}
@@ -9,11 +9,12 @@ function commentaires(){
 						}
 window.onload = commentaires;
 
+/*
 var champMotDePass = document.getElementById("champPassword");
 var inputMotDePass = document.getElementById("user_password");
 
 
-/*
+
 inputMotDePass.addEventListener("keyup",confirmation);
 
 function confirmation()
