@@ -1,0 +1,72 @@
+<!DOCTYPE HTML >
+<!-- Projet Web 5a ESIEA #Birba #Hamide -->
+<HTML>
+   <HEAD>
+	<meta charset="utf-8" />
+	<TITLE>UFC Projet Web</TITLE> <!--titre de l'onglet du navigateur-->
+	<link rel="stylesheet" href="style2.css"/>
+	<script src="clock.js"></script>
+	<script src="commentaires.js"></script>  
+   </HEAD>
+
+<body id ="contenu">
+	<header>
+		<div id="menuprincipal">
+			<nav>
+				<ul>
+					<li>Accueil
+						<ul>		
+							<li><a href="actu.html"><mark>L'actualité</mark></a></li>
+				    	</ul>
+					</li>
+					<li>Combattants
+						<ul>		
+							<li><a href="combattants.html#Poidsléger"><mark>Poids léger</mark></a></li>
+						    <li><a href="combattants.html#Poidsmimoyen"><mark>Poids mi-moyen</mark></a></li>
+						    <li><a href="combattants.html#Poids-moyen"><mark>Poids-moyen</mark></a></li> 
+							<li><a href="combattants.html#Poids-mi-lourd"><mark>Poids mi-lourd</mark></a></li>
+							<li><a href="combattants.html#Poids-lourd"><mark>Poids-lourd</mark></a></li>
+							<li><a href="combattants.html#Women's-Bantamweight"><mark>Women's Bantamweight</mark></a></li> 
+						</ul>
+					</li>
+					<li>Matchs
+						<ul>		
+							<li><a href="match.html#Match-Poids-léger"><mark>Poids léger</mark></a></li>
+						    <li><a href="match.html#Match-Poids-mi-moyen"><mark>Poids mi-moyen</mark></a></li>
+						    <li><a href="match.html#Match-Poids-moyen"><mark>Poids moyen</mark></a></li>
+						 	<li><a href="match.html#Match-Poids-mi-lourd"><mark>Poids mi-lourd</mark></a></li>
+							<li><a href="match.html#Match-Poids-lourd"><mark>Poids lourd</mark></a></li>
+							<li><a href="match.html#Match-Women's-Bantamweight"><mark>Women's Bantamweight</mark></a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>			
+		</div>
+	</header>
+	<!-- balise de l'horloge numérique -->
+ 	<span id="clock"></span> 
+	<div id="contenuprincipal">
+	<!-- page d'accueil -->
+	<section id="actu">
+		<!-- Les dernières actualités sur l'UFC -->
+		<article>
+		    <h1>L'actualité</h1>
+		    <p>Pour le moment il n'y a pas d'actualité</p>
+		</article>
+	</section>
+	</div>
+	
+	<form method="post" action="commentaires.php">
+		<p>
+			<label for="commentaires">Laissez un commentaire :</label>
+			<textarea name="commentaire" id="commentaire" rows="5" cols="50" placeholder="ecrivez votre commentaire ici" size="30" maxlengh="10" ></textarea>
+		</p>
+	</form>
+	
+	<footer id="footer">
+		<h1>Nous contacter!</h1>
+		<p>Vous pouvez nous laisser vos commentaires dans cette section</p>
+		<p>Bugs? Suggestions? Vous trouverez <a href="mailto:hamide@et.esiea.fr">ici</a> comment nous contacter !</p>
+	</footer>
+</body>
+</HTML>	
