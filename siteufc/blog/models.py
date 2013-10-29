@@ -19,6 +19,13 @@ class Article(models.Model):
 	def __unicode__(self):
  	  return u"%s" % self.titre
 
+class Match(models.Model):
+	nom = models.CharField(max_length=100)
+	contenu = models.TextField(null=True)
+	categorie = models.ForeignKey(Categorie)
+	
+	def __unicode__(self):
+	  return u"%s" % self.nom
 
 class Commentaire(models.Model):
 	auteur = models.CharField(max_length=30)

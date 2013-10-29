@@ -2,14 +2,15 @@
 #-*- coding: utf-8 -*- 
 
 from django.shortcuts import render, get_object_or_404
-from blog.models import Article, Categorie, Commentaire
+from blog.models import Article, Categorie, Commentaire, Match
 from blog.forms import CommentaireForm
 from django.http import Http404
 
 
 def actu(request):
   categorie = Categorie.objects.all()
-  return render(request,'blog/actu.html',{'toutes_categories':categorie})
+  match = Match.objects.all()
+  return render(request,'blog/actu.html',{'toutes_categorie':categorie,'tout_match':match})
 
 
 def article(request, nom_categorie):
@@ -17,9 +18,15 @@ def article(request, nom_categorie):
  article = Article.objects.filter(categorie__nom__contains=nom_categorie)
  return render (request, 'blog/article.html',{'categorie':categorie, 'tout_article':article})
 
+def match(request, nom_categorie):
+ categorie = get_object_or_404(Categorie, nom=nom_categorie)
+ match = Match.objects.filter(categorie__nom__contains=nom_categorie)
+ return render (request, 'blog/match.html',{'categorie':categorie, 'tout_match':match})
 
 def lire(request, nom_categorie, nom_article):
- 
  article = Article.objects.filter(categorie__nom__contains=nom_categorie).get(titre=nom_article)
  return render (request, 'blog/lire.html', {'article':article})
 
+def combat(request, nom_categorie, id):
+ match = Match.objects.filter(categorie__nom__contains=nom_categorie).get(id=id)
+ return render (request, 'blog/combat.html', {'match':match})
