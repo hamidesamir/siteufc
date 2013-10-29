@@ -4,11 +4,11 @@
 
 {% block content %}
 
-{% for categorie in toutes_categories %}
  <div class = "categorie">
    <h1> Explication UFC</h1>
    <p>L'UFC etc etc.. </p>
-   <p> <a href="{% url "blog.views.lire" article.id %}">{{ categorie.nom }}</a> </p>
+{% for categorie in toutes_categories %}
+   <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.nom }}</a> </p>
  </div>
  {% empty %}
   <p> Aucune categorie </p>

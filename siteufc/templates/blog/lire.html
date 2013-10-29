@@ -3,5 +3,7 @@
 {% block title %} <h1> {{ article.titre }} </h1> {% endblock %}
 
 {% block content %}
- <div class = "contenu"> {{article.contenu|linebreaks }} </div>
+ <div class = "contenu">
+  <p> {{article.contenu|linebreaks }} </p>
+ </div>
 {% endblock %}
