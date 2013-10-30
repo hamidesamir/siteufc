@@ -34,3 +34,11 @@ class Commentaire(models.Model):
 
 	def __unicode__(self):
 	  return u"%s" % self.contenu
+
+class Commentairematch(models.Model):
+	auteur = models.CharField(max_length=30)
+	contenu = models.TextField(null=True)
+	match = models.ForeignKey(Match)
+
+	def __unicode__(self):
+	  return u"%s" % self.contenu
