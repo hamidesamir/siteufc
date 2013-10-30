@@ -25,8 +25,21 @@ def match(request, nom_categorie):
 
 def lire(request, nom_categorie, nom_article):
  article = Article.objects.filter(categorie__nom__contains=nom_categorie).get(titre=nom_article)
- return render (request, 'blog/lire.html', {'article':article})
+ commentaires = get_object_or_404(Commentaire, article=article)
+ form = CommentaireForm(request.POST)
+    if form.is_valid(): 
+      commentaire = form.save(commit = False)
+      commentaire.article = article
+      commentaire.save()
+ return render (request, 'blog/lire.html', {'article':article, 'tous_commentaires':commentaires, 'commentaire':commentaire})
 
 def combat(request, nom_categorie, id):
  match = Match.objects.filter(categorie__nom__contains=nom_categorie).get(id=id)
- return render (request, 'blog/combat.html', {'match':match})
+ commentaires = get_object_or_404(Commentairematch, match=match)
+ form = CommentairematchForm(request.POST)
+    if form.is_valid(): 
+      commentaire = form.save(commit = False)
+      commentaire.match = match
+      commentaire.save()
+ return render (request, 'blog/combat.html', {'match':match}, 'tous_commentaires':commentaires, 'commentaire':commentaire}))
+
