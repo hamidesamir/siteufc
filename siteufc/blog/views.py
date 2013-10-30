@@ -2,8 +2,8 @@
 #-*- coding: utf-8 -*- 
 
 from django.shortcuts import render, get_object_or_404
-from blog.models import Article, Categorie, Commentaire, Match
-from blog.forms import CommentaireForm
+from blog.models import Article, Categorie, Commentaire, Match, Commentairematch
+from blog.forms import CommentaireForm, CommentairematchForm
 from django.http import Http404
 
 
@@ -25,21 +25,23 @@ def match(request, nom_categorie):
 
 def lire(request, nom_categorie, nom_article):
  article = Article.objects.filter(categorie__nom__contains=nom_categorie).get(titre=nom_article)
- commentaires = get_object_or_404(Commentaire, article=article)
+ commentaires = Commentaire.objects.filter(article__titre__contains=nom_article)
  form = CommentaireForm(request.POST)
-    if form.is_valid(): 
-      commentaire = form.save(commit = False)
-      commentaire.article = article
-      commentaire.save()
- return render (request, 'blog/lire.html', {'article':article, 'tous_commentaires':commentaires, 'commentaire':commentaire})
+ if form.is_valid(): 
+      	form.article = article
+	form.save()
+ return render (request, 'blog/lire.html', {'article':article, 'tous_commentaires':commentaires})
 
 def combat(request, nom_categorie, id):
  match = Match.objects.filter(categorie__nom__contains=nom_categorie).get(id=id)
- commentaires = get_object_or_404(Commentairematch, match=match)
- form = CommentairematchForm(request.POST)
-    if form.is_valid(): 
-      commentaire = form.save(commit = False)
-      commentaire.match = match
-      commentaire.save()
- return render (request, 'blog/combat.html', {'match':match}, 'tous_commentaires':commentaires, 'commentaire':commentaire}))
+ commentaires = Commentairematch.objects.filter(match__id__contains=id)
+ if request.method == 'POST':
+  form = CommentairematchForm(request.POST,instance=Commentairematch()) 
+  if form.is_valid(): 
+	commentairematch = form.save(commit=False)
+	commentairematch.match = match
+	commentairematch.save()
+ else:
+	form=CommentairematchForm()
+ return render (request, 'blog/combat.html', {'match':match, 'tous_commentaires':commentaires,'form':form})
 

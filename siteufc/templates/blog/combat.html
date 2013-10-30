@@ -7,7 +7,7 @@
   <p> {{match.contenu|linebreaks }} </p>
  </div>
  
-  {% for commentairematch in tous_commentaire %}
+{% for commentairematch in tous_commentaires %}
  <div class = "commentairematch">
    <h3>{{ commentairematch.auteur }} </h3>
    <p>{{ commentairematch.contenu|linebreaks }}</p>
@@ -16,7 +16,7 @@
   <p> Aucun commentaire </p>
 {% endfor %}
 
-<form action="{% url "blog.views.combat" %}" method="post">
+<form action="{% url "blog.views.combat" match.categorie.nom match.id %}" method="post">
 {%csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="Submit" />

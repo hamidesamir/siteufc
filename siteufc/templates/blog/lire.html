@@ -8,7 +8,7 @@
  </div>
  
  
- {% for commentairearticle in tous_commentaire %}
+ {% for commentairearticle in tous_commentaires %}
  <div class = "commentairearticle">
    <h3>{{ commentairearticle.auteur }} </h3>
    <p>{{ commentairearticle.contenu|linebreaks }}</p>
@@ -17,7 +17,7 @@
   <p> Aucun commentaire </p>
 {% endfor %}
 
-<form action="{% url "blog.views.lire" %}" method="post">
+<form action="{% url "blog.views.lire" article.categorie.nom article.titre %}" method="post">
 {%csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="Submit" />
