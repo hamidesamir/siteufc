@@ -5,3 +5,4 @@ class CommentaireForm(forms.ModelForm):
 	class Meta:
 	  model = Commentaire
 	  exclude = ('article')
+	  
