@@ -6,4 +6,20 @@
  <div class = "contenu">
   <p> {{match.contenu|linebreaks }} </p>
  </div>
+ 
+  {% for commentairematch in tous_commentaire %}
+ <div class = "commentairematch">
+   <h3>{{ commentairematch.auteur }} </h3>
+   <p>{{ commentairematch.contenu|linebreaks }}</p>
+ </div>
+ {% empty %}
+  <p> Aucun commentaire </p>
+{% endfor %}
+
+<form action="{% url "blog.views.combat" %}" method="post">
+{%csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
 {% endblock %}

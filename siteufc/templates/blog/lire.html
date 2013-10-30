@@ -6,4 +6,22 @@
  <div class = "contenu">
   <p> {{article.contenu|linebreaks }} </p>
  </div>
+ 
+ 
+ {% for commentairearticle in tous_commentaire %}
+ <div class = "commentairearticle">
+   <h3>{{ commentairearticle.auteur }} </h3>
+   <p>{{ commentairearticle.contenu|linebreaks }}</p>
+ </div>
+ {% empty %}
+  <p> Aucun commentaire </p>
+{% endfor %}
+
+<form action="{% url "blog.views.lire" %}" method="post">
+{%csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+
 {% endblock %}
