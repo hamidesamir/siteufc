@@ -26,11 +26,15 @@ def match(request, nom_categorie):
 def lire(request, nom_categorie, nom_article):
  article = Article.objects.filter(categorie__nom__contains=nom_categorie).get(titre=nom_article)
  commentaires = Commentaire.objects.filter(article__titre__contains=nom_article)
- form = CommentaireForm(request.POST)
- if form.is_valid(): 
-      	form.article = article
-	form.save()
- return render (request, 'blog/lire.html', {'article':article, 'tous_commentaires':commentaires})
+ if request.method == 'POST':
+  form = CommentaireForm(request.POST,instance=Commentaire()) 
+  if form.is_valid(): 
+	commentaire = form.save(commit=False)
+	commentaire.match = match
+	commentaire.save()
+ else:
+	form=CommentaireForm()
+ return render (request, 'blog/lire.html', {'article':article, 'tous_commentaires':commentaires, 'form':form})
 
 def combat(request, nom_categorie, id):
  match = Match.objects.filter(categorie__nom__contains=nom_categorie).get(id=id)
