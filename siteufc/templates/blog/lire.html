@@ -3,6 +3,9 @@
 {% block title %} <h1> {{ article.titre }} </h1> {% endblock %}
 
 {% block content %}
+
+ <img src="{{article.image}}" alt="Photo combattant"/>
+ 
  <div class = "contenu">
   <p> {{article.contenu|linebreaks }} </p>
  </div>
