@@ -7,7 +7,7 @@
  <div class = "categorie">
    <h1> Explication UFC</h1>
    <p>L'UFC etc etc.. </p>
-{% for categorie in toutes_categorie %}
+{% for categorie in toutes_categories %}
    <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.label }}</a> </p>
  </div>
  {% empty %}
