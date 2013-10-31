@@ -12,6 +12,13 @@ def actu(request):
   match = Match.objects.all()
   return render(request,'blog/actu.html',{'toutes_categorie':categorie,'tout_match':match})
 
+def combattants(request):
+  categorie = Categorie.objects.all()
+  return render(request,'blog/accueilcombattants.html', {'toutes_categories':categorie})
+
+def accueilmatch(request):
+  match = Match.objects.all()
+  return render(request,'blog/accueilmatch.html',{'tout_match':match})
 
 def article(request, nom_categorie):
  categorie = get_object_or_404(Categorie, nom=nom_categorie) 
@@ -30,7 +37,7 @@ def lire(request, nom_categorie, nom_article):
   form = CommentaireForm(request.POST,instance=Commentaire()) 
   if form.is_valid(): 
 	commentaire = form.save(commit=False)
-	commentaire.match = match
+	commentaire.article = article
 	commentaire.save()
  else:
 	form=CommentaireForm()
