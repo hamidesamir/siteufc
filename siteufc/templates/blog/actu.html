@@ -8,7 +8,7 @@
    <h1> Explication UFC</h1>
    <p>L'UFC etc etc.. </p>
 {% for categorie in toutes_categorie %}
-   <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.nom }}</a> </p>
+   <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.label }}</a> </p>
  </div>
  {% empty %}
   <p> Aucune categorie </p>
@@ -16,7 +16,7 @@
 
 <div class ="match">
 {% for match in tout_match %}
- <p> <a href="{% url "blog.views.match" match.categorie.nom %}">{{ match.nom }}</a><p>
+ <p> <a href="{% url "blog.views.match" match.categorie.nom %}">{{ match.label }}</a><p>
 </div>
 {% empty %}
  <p> Aucun match </p>
