@@ -13,28 +13,20 @@
 		<div id="menuprincipal">
 			<nav>
 			  	<ul>
-					<li>Accueil
+					<li><a href="{% url "blog.views.actu" %}"><mark>L'actualité'</mark></a></li>
+					
+					<li><a href="{% url "blog.views.combattants" %}"><mark>Combattants</mark></a>
 						<ul>		
-							<li><a href="{% url "blog.views.actu" %}"><mark>L'actualité'</mark></a></li>
-				    	</ul>
-					</li>
-					<li>Combattants
-						<ul>		
-							<li><a href="#Poidsléger"><mark>Poids léger</mark></a></li>
-						    <li><a href="#Poidsmimoyen"><mark>Poids mi-moyen</mark></a></li>
-						    <li><a href="#Poids-moyen"><mark>Poids moyen</mark></a></li> 
-							<li><a href="#Poids-mi-lourd"><mark>Poids mi-lourd</mark></a></li>
-							<li><a href="#Poids-lourd"><mark>Poids lourd</mark></a></li>
-							<li><a href="Women's-Bantamweight"><mark>Women's Bantamweight</mark></a></li> 
+							<li><a href="{% url "blog.views.article" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
+							<li><a href="{% url "blog.views.article" 'poids-moyen' %}"><mark>Poids moyen</mark></a></li> 
+							<li><a href="{% url "blog.views.article" 'poids-lourd' %}"><mark>Poids lourd</mark></a></li>
 						</ul>
 					</li>
-					<li>Matchs
+					<li><li><a href="{% url "blog.views.accueilmatch" %}"><mark>Matchs</mark></a>
 						<ul>		
-							<li><a href="#Match-Poidsléger"><mark>Poids léger</mark></a></li>
-						    <li><a href="#Match-Poidsmimoyen"><mark>Poids mi-moyen</mark></a></li>
-						    <li><a href="#Match-Poids-moyen"><mark>Poids moyen</mark></a></li> 
-							<li><a href="#Match-Poids-mi-lourd"><mark>Poids lourd</mark></a></li>
-							<li><a href="#Match-Women's-Bantamweight"><mark>Women's Bantamweight</mark></a></li> 
+							<li><a href="{% url "blog.views.match" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
+							<li><a href="{% url "blog.views.match" 'poids-leger' %}"><mark>Poids moyen</mark></a></li> 
+							<li><a href="{% url "blog.views.match" 'poids-leger' %}"><mark>Poids lourd</mark></a></li>
 						</ul>
 					</li>
 				</ul>
