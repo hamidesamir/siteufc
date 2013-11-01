@@ -5,10 +5,9 @@
 {% block content %}
 
  <div class = "categorie">
-   <h1> Explication UFC</h1>
-   <p>L'UFC etc etc.. </p>
+   <p> Ci dessous les fiche des combattants selon leur catégorie :</p>
 {% for categorie in toutes_categories %}
-   <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.label }}</a> </p>
+   <p> <a href="{% url "blog.views.article" categorie.nom %}">Catégorie {{ categorie.label }}</a> </p>
  </div>
  {% empty %}
   <p> Aucune categorie </p>
