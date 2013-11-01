@@ -1,0 +1,897 @@
+[
+{
+  "pk": 1, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "permission", 
+    "name": "permission", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 2, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "group", 
+    "name": "group", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 3, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "user", 
+    "name": "user", 
+    "app_label": "auth"
+  }
+},
+{
+  "pk": 4, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "contenttype", 
+    "name": "content type", 
+    "app_label": "contenttypes"
+  }
+},
+{
+  "pk": 5, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "session", 
+    "name": "session", 
+    "app_label": "sessions"
+  }
+},
+{
+  "pk": 6, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "site", 
+    "name": "site", 
+    "app_label": "sites"
+  }
+},
+{
+  "pk": 7, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "comment", 
+    "name": "comment", 
+    "app_label": "comments"
+  }
+},
+{
+  "pk": 8, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "commentflag", 
+    "name": "comment flag", 
+    "app_label": "comments"
+  }
+},
+{
+  "pk": 9, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "logentry", 
+    "name": "log entry", 
+    "app_label": "admin"
+  }
+},
+{
+  "pk": 10, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "categorie", 
+    "name": "categorie", 
+    "app_label": "blog"
+  }
+},
+{
+  "pk": 11, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "article", 
+    "name": "article", 
+    "app_label": "blog"
+  }
+},
+{
+  "pk": 12, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "match", 
+    "name": "match", 
+    "app_label": "blog"
+  }
+},
+{
+  "pk": 13, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "commentaire", 
+    "name": "commentaire", 
+    "app_label": "blog"
+  }
+},
+{
+  "pk": 14, 
+  "model": "contenttypes.contenttype", 
+  "fields": {
+    "model": "commentairematch", 
+    "name": "commentairematch", 
+    "app_label": "blog"
+  }
+},
+{
+  "pk": "7x135a19vclla9b249ha7kh68bl8373b", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2013-11-15T00:32:37.507Z", 
+    "session_data": "ZWMxZTM1MTVjZmMyMzhmYzk2Y2M2MjE1OGRiOTEzMjdmMjJhNWEzNTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"
+  }
+},
+{
+  "pk": "i18a8ppoc3sb45vvazw4z7e92zhfdofu", 
+  "model": "sessions.session", 
+  "fields": {
+    "expire_date": "2013-11-14T19:07:27.638Z", 
+    "session_data": "ZWMxZTM1MTVjZmMyMzhmYzk2Y2M2MjE1OGRiOTEzMjdmMjJhNWEzNTqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQRLAXUu"
+  }
+},
+{
+  "pk": 1, 
+  "model": "sites.site", 
+  "fields": {
+    "domain": "example.com", 
+    "name": "example.com"
+  }
+},
+{
+  "pk": 1, 
+  "model": "blog.categorie", 
+  "fields": {
+    "nom": "poids-leger", 
+    "label": "Poids leger"
+  }
+},
+{
+  "pk": 2, 
+  "model": "blog.categorie", 
+  "fields": {
+    "nom": "poids-lourd", 
+    "label": "Poids lourd"
+  }
+},
+{
+  "pk": 3, 
+  "model": "blog.categorie", 
+  "fields": {
+    "nom": "poids-moyen", 
+    "label": "Poids moyen"
+  }
+},
+{
+  "pk": 1, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 1, 
+    "image": "/assets/Demetrious-Johnson.jpg", 
+    "label": "Demetrious Johnson", 
+    "contenu": "Entra\u00eenement: L'entra\u00eenement reste le m\u00eame que le dernier camp - beaucoup de puissance et d'explosion , ainsi que la vitesse et l'agilit\u00e9 et beaucoup de natation avec la course.\r\n\r\nQuand et pourquoi avez-vous commenc\u00e9 la formation \u00e0 battre? J'ai commenc\u00e9 \u00e0 m'entra\u00eener pour combattre en Octobre 2005 . Je regardais la premi\u00e8re saison de \u00abThe Ultimate Fighter \u00bb et j'ai aim\u00e9 la fa\u00e7on dont ils \u00e9taient en forme. J'ai toujours aim\u00e9 \u00eatre en bonne sant\u00e9 , de sorte que le r\u00e9gime d'entra\u00eenement m'a intrigu\u00e9 . Reese Andy a \u00e9t\u00e9 celui qui m'a influenc\u00e9 de signer avec AMC et alors il est juste de d\u00e9coller de l\u00e0 .\r\n\r\nQuels rangs et quels titres avez-vous tenu ? La derni\u00e8re fois que j'ai v\u00e9rifi\u00e9 , j'\u00e9tait \u00e0 la 31\u00e8me place dans le monde, mais mon but est # 1. Dans mon circuit amateur je tenais 4 titres diff\u00e9rents . Genesis MMA & Genesis Muay Thai , Rumble on the Ridge , Ax Championship Fighting\r\n\r\nAvez-vous des h\u00e9ros ? Batman, parce que j'ai grandi en le regardant et j'ai toujours voulu \u00eatre comme lui.\r\n\r\nQuelle est votre technique pr\u00e9f\u00e9r\u00e9e? Mon jeu de jambes .\r\n\r\nQu'est-ce que cela signifie pour vous de combattre dans l'UFC ? Ca signifie tout. Je ne peux pas attendre de me battre pour l'UFC et je ne peux pas attendre pour montrer \u00e0 l'UFC que je suis l\u00e0.\r\n\r\nAllez-vous aller \u00e0 l'universit\u00e9 et si oui, dans quelle mesure avez-vous gagn\u00e9 ? Oui, je suis all\u00e9 \u00e0 Pierce Community College et je n'ai pas fini mon dipl\u00f4me associ\u00e9s parce que j'\u00e9tais dans un tournant . C'\u00e9tait soit rester \u00e0 l'\u00e9cole et obtenir mon AA ou poursuivre une formation plus dur et essayer de faire une carri\u00e8re dans le sport de combat. J'ai pris la d\u00e9cision de poursuivre mon r\u00eave comme combattant et je suis ici aujourd'hui .\r\n\r\nQuel \u00e9tait votre travail avant de commencer \u00e0 vous battre? Eh bien, je suis toujours dans un emploi \u00e0 temps plein en plus des combats. Je travaille dans un entrep\u00f4t dans le centre de Tacoma, une usine de tubes de recyclage.\r\n\r\n\u2022 Sur cinq lutte sans d\u00e9faite ( 4-0-1 )\r\n\r\n\u2022 Premier champion poids mouche en histoire de l'UFC\r\n\r\n\u2022 2-1 dans le WEC avec des victoires sur Damacio page et Nick Pace et une perte d\u00e9cision proche de Brad Pickett\r\n\r\n\u2022 athl\u00e8te multi-sports \u00e0 l'\u00e9cole secondaire\r\n\r\n\u2022 Six victoires par soumission , deux par KO", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:18:42.848Z", 
+    "titre": "demetrious-johnson"
+  }
+},
+{
+  "pk": 2, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 1, 
+    "image": "/assets/Georges-St-Pierre.jpg", 
+    "label": "Georges St Pierre", 
+    "contenu": "ENTRA\u00ceNEMENT : Je m\u2019entra\u00eene six jours par semaine \u2013 une combinaison diff\u00e9rente de deux de ces sports : lutte, jiu-jitsu br\u00e9silien (JJB), boxe, muay tha\u00ef, conditionnement physique, course \u00e0 pied et sparring de MMA.\r\n \r\nQuand et pourquoi as-tu commenc\u00e9 \u00e0 t\u2019entra\u00eener en vue de combattre? J\u2019ai commenc\u00e9 les arts martiaux lorsque j\u2019avais six ans par la pratique du karat\u00e9 kyokushin.   Lorsque j\u2019ai commenc\u00e9 en MMA, j\u2019ai commenc\u00e9 \u00e0 m\u2019entra\u00eener en lutte aupr\u00e8s de l\u2019\u00e9quipe nationale ainsi qu\u2019en jiu-jitsu br\u00e9silien chez Nova Uniao.  Je m\u2019entra\u00eene maintenant en lutte, JJB, muay tha\u00ef et boxe.  Lorsque j\u2019ai rencontr\u00e9 St\u00e9phane Patry et son \u00e9quipe, j\u2019ai d\u00e9cid\u00e9 que je voulais devenir un champion dans ce sport.\r\n \r\nQuels rangs et titres d\u00e9tiens-tu? Deux fois actuel champion des poids mi-moyens de l\u2019UFC, ancien champion des poids mi-moyens TKO, ceinture noire de jiu-jitsu br\u00e9silien sous Bruno Fernandes.\r\n \r\nEst-ce que tu as des h\u00e9ros? Mon h\u00e9ros en MMA est Randy Couture.\r\n \r\nQuelle est ta technique favorite?  J\u2019aime amener mes adversaires au sol. Une fois au sol, je suis aussi dangereux en \u00ab ground and pound \u00bb qu\u2019en soumission.\r\n \r\nQu\u2019est-ce que \u00e7a signifie pour toi de combattre \u00e0 l\u2019UFC? Combattre \u00e0 est un r\u00eave devenu r\u00e9alit\u00e9 \u2013 et encore aujourd\u2019hui, j\u2019en suis \u00e9tonn\u00e9!  L\u2019UFC m\u2019a permis de me d\u00e9velopper et d\u2019acqu\u00e9rir une certaine maturit\u00e9 en tant que combattant et il y a tant d\u2019opportunit\u00e9s que je n\u2019aurai pu avoir autrement si je n\u2019avais pas \u00e9t\u00e9 un combattant de l\u2019UFC! \r\n \r\nEst-ce que tu as fr\u00e9quent\u00e9 le coll\u00e8ge et si oui, quel(s) dipl\u00f4me(s) as-tu obtenu(s)? J\u2019allais obtenir mon dipl\u00f4me en administration, mais j\u2019ai tout mis sur la glace afin de concentrer mes \u00e9nergies sur ma carri\u00e8re de combattant.\r\n \r\nQuel \u00e9tait ton m\u00e9tier avant de commencer \u00e0 combattre?  Avant de commencer \u00e0 combattre, j\u2019\u00e9tais \u00e9tudiant, mais j\u2019ai maintenant la chance de pouvoir m\u2019entra\u00eener \u00e0 temps plein.\r\n\u2022    Un des athl\u00e8tes canadiens les plus populaires de tous les temps selon plusieurs magazines et sondages\r\n \r\n\u2022    Il est fascin\u00e9 par la pal\u00e9ontologie et est passionn\u00e9 par les dinosaures\r\n \r\n\u2022    A remport\u00e9 10 combats cons\u00e9cutifs et est demeur\u00e9 invaincu au cours des quatre derni\u00e8res ann\u00e9es\r\n \r\n\u2022    Arrive \u00e0 chaque conf\u00e9rence de presse tir\u00e9e \u00e0 quatre \u00e9pingles avec un dispendieux veston et cravate.  Porte aussi un complet veston-cravate en arrivant \u00e0 l\u2019ar\u00e9na les soirs d\u2019\u00e9v\u00e9nements.  Reconnu et respect\u00e9 non seulement en tant que combattant d\u2019\u00e9lite, mais aussi pour sa classe.\r\n \r\n\u2022    Il est, pour certaines raisons, un des favoris de la gent f\u00e9minine.  Certains ont \u00e9mis la th\u00e9orie que son charme provient de son accent fran\u00e7ais, de son corps parfaitement d\u00e9coup\u00e9, de sa gr\u00e2ce lorsqu\u2019il se meut et de son look.\r\n \r\n\u2022    Sa brillante fiche inclut des victoires sur les anciens champions de l\u2019UFC Matt Hughes (deux fois) et B.J. Penn (deux fois) ainsi que Jon Fitch, Thiago Alves, Josh Koscheck (deux fois) et avoir mis fin \u00e0 la s\u00e9rie de quinze victoires cons\u00e9cutives de Jake Shields.\r\n \r\n\u2022    S\u2019entra\u00eene r\u00e9guli\u00e8rement aupr\u00e8s de l\u2019\u00e9quipe nationale canadienne de lutte et est consid\u00e9r\u00e9 comme des meilleurs lutteurs en MMA (ce qui est extraordinaire consid\u00e9rant qu\u2019il a \u00e9t\u00e9 initi\u00e9 \u00e0 la lutte \u00e0 l\u2019\u00e2ge adulte et n\u2019a pas pratiqu\u00e9 ce sport depuis sa plus tendre enfance).\r\n \r\n\u2022    Il poss\u00e8de une ceinture noire en jiu-jitsu br\u00e9silien, en karat\u00e9 et en \u201cGaidojutsu\u201d de Greg Jackson\r\n \r\n\u2022    Parle le fran\u00e7ais et l\u2019anglais\r\n \r\n\u2022    Il est la principale vedette d\u2019un documentaire de MMA intitul\u00e9 \u201cThe Striking Truth\u201d.", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:20:03.577Z", 
+    "titre": "georges-st-pierre"
+  }
+},
+{
+  "pk": 3, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 2, 
+    "image": "/assets/Cain-Velasquez.jpg", 
+    "label": "Cain Velasquez", 
+    "contenu": "Description : Ca\u00efn est un am\u00e9ricain de premi\u00e8re g\u00e9n\u00e9ration avec une grande fiert\u00e9 de son h\u00e9ritage mexicain. Son p\u00e8re, Efrain, se dirigea vers les Etats-Unis du Mexique et, apr\u00e8s avoir \u00e9t\u00e9 d\u00e9tourn\u00e9 six fois, a obtenu la citoyennet\u00e9 sur sa septi\u00e8me tentative. Velasquez, le premier Latino \u00e0 remporter le titre mondial des poids lourds dans tout grand sport de combat, parle couramment l'espagnol et l'anglais. Il dit qu'il a h\u00e9rit\u00e9 de son \u00e9thique de travail de son p\u00e8re, qui a travaill\u00e9 incroyablement longues heures \u00e0 ramasser laitue sans se plaindre. Contactez-Sports: Velasquez \u00e9tait un lutteur hors concours \u00e0 Kofa High School \u00e0 Yuma, en Arizona, o\u00f9 il a compil\u00e9 un dossier de 110-10 alors qu'il servait en tant que capitaine des deux \u00e9quipes de football de la lutte et. Il a continu\u00e9 \u00e0 se battre \u00e0 l'Arizona State et plac\u00e9 \u00e0 l'int\u00e9rieur des nationaux cinq premiers deux ans dans une rang\u00e9e. Velasquez a pris la d\u00e9cision de passer \u00e0 MMA apr\u00e8s l'obtention du dipl\u00f4me. Ligue des siennes: de Ca\u00efn r\u00e9putation implacable de terminaison dans les gymnases et les victoires en d\u00e9but de carri\u00e8re, il \u00e9tait impossible pour sa gestion de trouver des adversaires consentants. La situation a forc\u00e9 Velasquez pour passer au niveau UFC \u00e0 seulement son troisi\u00e8me combat apr\u00e8s un d\u00e9but de Strikeforce. . Qu'il a domin\u00e9 la comp\u00e9tition, en restant invaincu, tout le chemin \u00e0 la destruction de Brock Lesnar pour le titre UFC en Octobre 2010 Recul met en place Comeback: Velasquez a subi une grave blessure au genou contre Lesnar, qui non seulement a emp\u00each\u00e9 pendant un an, mais a \u00e9galement contribu\u00e9 \u00e0 son perte \u00e0 Junior Dos Santos dans la premi\u00e8re jamais UFC on FOX \u00e9v\u00e9nement en Novembre 2011. Mais Velasquez retourn\u00e9 le mois de mai suivant pour vaincre Silva \"Bigfoot\" en un seul tour puis achemin\u00e9 Dos Santos dans leur combat revanche \u00e0 nouveau remporter le titre. Une autre victoire rapide sur Bigfoot mis en place un match en caoutchouc contre Dos Santos.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLe plus: Velasquez a d\u00e9j\u00e0 une forte demande d'\u00eatre l'un des meilleurs poids lourds jamais comme un deux-temps et r\u00e9gnant champion de l'UFC. Il a d\u00e9j\u00e0 \u00e9tabli des rep\u00e8res UFC avec le plus de KO dans l'histoire des poids lourds (8), takedowns plus de poids dans une carri\u00e8re (27) et en un seul combat (11). Velasquez aussi des terres 6,5 gr\u00e8ves importantes par minute - le taux le plus \u00e9lev\u00e9 dans l'histoire de l'UFC (min 5 combats) - tandis que seulement absorbent seulement 1,6 gr\u00e8ves importantes par minute, le meilleur taux parmi les poids lourds actifs. Son +4,9 diff\u00e9rentiel de gr\u00e8ve est le plus \u00e9lev\u00e9 dans l'histoire de l'UFC. Good Company: Apr\u00e8s avoir obtenu un dipl\u00f4me en \u00e9ducation de l'\u00c9tat de l'Arizona, Velasquez et ses co\u00e9quipiers Ryan Bader et CB Dollaway d\u00e9cid\u00e9 d'entrer dans le MMA. Velasquez a continu\u00e9 \u00e0 s'entra\u00eener avec Lyoto Machida futur champion avant la victoire de Machida sur Tito Ortiz. De l\u00e0, Velasquez a rejoint American Academy Kickboxing (AKA), l'une des \u00e9coles poineering des arts martiaux mixtes. Combattants notables incluent Daniel Cormier, Jon Fitch, Gray Maynard, Frank Shamrock, Josh Thomson et Khabib Nurmagomedov. Qu'est-ce que \u00e7a vaut: Cain Velasquez n'est pas seulement une \u00e0 deux fois et actuel champion poids lourd UFC, mais il est aussi deux fois All- am\u00e9ricaine dans la lutte, une deux fois Pac-10 champion, un Junior College champion national pour l'Iowa Central Community College, et a r\u00e9cemment obtenu sa ceinture noire en jui-jitsu br\u00e9silien.", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:24:30.584Z", 
+    "titre": "cain-velasquez"
+  }
+},
+{
+  "pk": 4, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 2, 
+    "image": "/assets/Chris-Weidman.jpg", 
+    "label": "Chris Weidman", 
+    "contenu": "Entra\u00eenement : regarder les dessins anim\u00e9s avec ma fille, puis la porte \u00e0 Longo le reste de la journ\u00e9e.\r\n\r\nQuand et pourquoi avez-vous commenc\u00e9 la formation des combats? j'aidais certains combattants de MMA avec leur lutte, alors je me suis int\u00e9ress\u00e9. Que les grades et titres occupez-vous? Deux fois Junior College All-American, Division de deux fois 1 All-American \u00e0 Hofstra, NYS lyc\u00e9e Wrestling Champion 2007 CAA Wrestling Champion, NYS College Wrestling Champion, Ring of Combat Middleweight Champion, Grapplers qu\u00eate absolue Division Champion, US Jiu-Jitsu Br\u00e9silien Champion. Avez-vous des h\u00e9ros?   Sans aucun doute, mon h\u00e9ros est mon p\u00e8re. Je l'ai vu passer par des choses assez difficiles dans sa vie avec poss\u00e9der sa propre entreprise et personnellement. Il g\u00e8re toutes les situations avec tact et respect d'autrui. Et s'il \u00e9tait toujours en faute, il n'avait pas de probl\u00e8me de poss\u00e9der \u00e0 la hauteur. J'ai toujours admir\u00e9 la fa\u00e7on dont il traitait ses employ\u00e9s et leur donnerais la chemise sur le dos s'ils en avaient besoin, sans penser \u00e0 lui-m\u00eame. Il l'a fait \u00e0 presque chacun de mes et les matches de mes fr\u00e8res et s\u0153urs, des jeux, des activit\u00e9s scolaires, etc et il est probablement le plus fort, partisan le plus \u00e9mouvant dans les tribunes. Son amour pour toute la famille et Dieu est quelque chose que j'attends de faire respecter dans ma propre vie.   Qu'est-ce que cela signifie pour vous de combattre \u00e0 l'UFC? J'ai mis beaucoup de buts dans ma vie, surtout athl\u00e9tiquement. Certains que j'ai accompli et d'autres que je n'ai pas pu. Cependant, je peux dire qu'aucun de ceux importe maintenant, parce que les combats dans l'UFC \u00e9tait mon but ultime et le r\u00eave.  Avez-vous aller \u00e0 l'universit\u00e9 et si oui, dans quelle mesure avez-vous gagn\u00e9? Je suis all\u00e9 \u00e0 l'Universit\u00e9 Hofstra \u00e0 Hempstead, NY. J'ai obtenu un dipl\u00f4me de baccalaur\u00e9at en psychologie ainsi qu'une ma\u00eetrise en \u00e9ducation physique Quel \u00e9tait votre travail avant de commencer \u00e0 combattre ? Avant de commencer le combat, j'\u00e9tais un entra\u00eeneur de lutte adjoint \u00e0 l'Universit\u00e9 Hofstra et un \u00e9tudiant dipl\u00f4m\u00e9 \u00e0 temps plein. r\u00e9alisations sp\u00e9cifiques en comp\u00e9tition amateur? J'\u00e9tais Grapplers Qu\u00eate champion dans ma cat\u00e9gorie de poids et dans la division absolue, avec les 13 matchs se terminant par soumission. Abu Dhabi essais champion avec une victoire de soumission en finale sur un champion du monde. des r\u00e9alisations sp\u00e9cifiques en pro concurrence? Ring of Combat Middleweight Champion, US Jiu Champion Jistu 2009 ADCC participant et Absolute Division Participant ADCC (arbitre choisi). technique grappling Favorite : Armbar Favorite technique de frappe: Crochet \r\n\r\n\u2022 Pro depuis 2009 \u2022 Consid\u00e9r\u00e9 comme le haut-moyens de frapper le sport dans les ann\u00e9es \u2022 D\u00e9fait Phil Davis et Ryan Bader lors de son coll\u00e8ge carri\u00e8re de lutteur \u2022 Quatre victoires par KO, trois par soumission ", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:26:36.715Z", 
+    "titre": "chris-weidman"
+  }
+},
+{
+  "pk": 5, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 3, 
+    "image": "/assets/Dominick-Cruz.jpg", 
+    "label": "Dominick Cruz", 
+    "contenu": "Entra\u00eenement : Je m'entra\u00eene trois fois le lundi, puis deux fois par jour du mardi au vendredi. Une fois le samedi... Et le dimanche c'est repos ! Je m\u00e9lange des techniques de lutte, JJB, Boxes et shootboxing.\r\n\r\nQue penses-tu de ton adversaire, Urijah Faber ? J'ai h\u00e2te de le battre.\r\n\r\nQuand et comment as-tu commenc\u00e9 l\u2019entra\u00eenement en sports de combat ?  J'ai fait de la lutte toute ma vie et je voulais continuer \u00e0 faire de la comp\u00e9tition.\r\n\r\nQuels rangs et titres d\u00e9tiens-tu ?  Champion poids coq de l'UFC, Champion poids coq du WEC. Champion Total Combat 145 & 155 lb (66 et 71 kg). Class\u00e9 Num\u00e9ro 1 au ROTC.\r\n\r\nEst-ce que tu as des idoles ? Ma m\u00e8re\r\n\r\nTechnique favorite : Uppercut\r\n\r\nQue signifie pour toi combattre \u00e0 l\u2019UFC ? Cela signifie que je peux vraiment dire que je suis un des meilleurs combattants du monde et que mes r\u00eaves commencent doucement \u00e0 se concr\u00e9tiser !\r\n\r\nQuel \u00e9tait ton m\u00e9tier avant d\u2019\u00eatre combattant ? Je travaillais dans le service client\r\n\r\nTon combat professionnel le plus m\u00e9morable ?  Probablement ma victoire contre Charlie Valencia au WEC car il a la r\u00e9putation d'\u00eatre un adversaire coriace, et parce que c'\u00e9tait ma premi\u00e8re victoire au WEC\r\n\r\n\r\nTon combat professionnel le plus difficile ?  Dave Hisquierdo au Total Combat. Le combat \u00e0 dur\u00e9e trois round et j'ai gagn\u00e9 par d\u00e9cision partag\u00e9e, mais c'\u00e9tait un combat dur. J'\u00e9tais moins complet comme combattant \u00e0 l'\u00e9poque et je me suis fait tabasser, mais j'ai quand m\u00eame gagn\u00e9.\r\n\r\nAvec qui tu as pr\u00e9par\u00e9 ce combat ?  Mes partenaires d'entra\u00eenement son  Danny Martinez, Nick Gonzalez, Rolando Perez, Shannon Gugerty, Joel Tudor entre autres.\r\n\r\nAs tu adapt\u00e9 ton style ou ton entra\u00eenement pour ton adversaire ?  Mon style reste \u00e9lusif, et rapide avec un rythme tr\u00e8s \u00e9lev\u00e9. C'est son style qui sera forc\u00e9 \u00e0 s'adapter au mien.\r\n\r\nDe quoi tu te sers pour te motive pour ce combat ?  Pour la motivation je pense \u00e0 mon bonheur, et les sacrifices que j'ai fait pour \u00eatre l\u00e0. Perdre n'est jamais un option. \r\n\r\nQu'aimes tu le plus dans ce sport ? Avoir un influence positif sur d'autres personnes.\r\n\r\n\u2022    Premier champion poids coq de l'UFC\r\n\r\n\u2022    Invaincu \u00e0 135 lb/62 kg (7-0)\r\n\r\n\u2022    7-1 lors de sa carri\u00e8re au WEC\r\n\r\n\u2022    Un style de boxe peu-orthodoxe qui est tr\u00e8s difficile \u00e0 d\u00e9chiffrer\r\n\r\n\u2022    Seule d\u00e9faite en tant que professionnel \u00e9tait lors d'un combat pour la ceinture poids plume du WEC face \u00e0 Urijah Faber\r\n\r\n\u2022    Professionnel depuis 2005\r\n\r\n\u2022    Six victoires par KO, une par soumission", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:27:33.571Z", 
+    "titre": "dominick-cruz"
+  }
+},
+{
+  "pk": 6, 
+  "model": "blog.article", 
+  "fields": {
+    "categorie": 3, 
+    "image": "/assets/Jon-Jones.jpg", 
+    "label": "Jon Jones", 
+    "contenu": "Entra\u00eenement : Je me l\u00e8ve \u00e0 6:00, prend mon petit d\u00e9jeuner puis me recouche jusqu'\u00e0 9:00 pour ensuite me rendre \u00e0 mon premier entra\u00eenement qui d\u00e9bute \u00e0 9:30.  Une journ\u00e9e, nous ferons du kickboxing, une autre du jiu-jitsu, puis les autres, nous ferons de la lutte ou de la boxe. G\u00e9n\u00e9ralement, je me livre \u00e0 des sessions de sparring tous les jours. \u00c0 14:30, je travaille avec mon entra\u00eeneur en conditionnement physique, Kelly Tekin, puis en soir\u00e9e, vers 17:30-18:00, j'ai des sessions un \u00e0 un avec Greg Jackson o\u00f9 on \u00e9labore la strat\u00e9gie.  D\u00e9pendamment s'il me reste ou non de l'\u00e9nergie, je me rends au Defined Fitness et je fais des longueurs \u00e0 la piscine ou me rends au sauna. \r\nQuand et pourquoi as-tu commenc\u00e9 \u00e0 t'entra\u00eener pour te battre? J'ai commenc\u00e9 \u00e0 m'entra\u00eener en arts martiaux mixtes il y a 14 mois et c'est mon agent, Ryan Ciotoli, qui m'a fait conna\u00eetre ce sport professionnel.\r\n\r\nQuels rangs et titres d\u00e9tiens-tu? Champion national de lutte JUCO, Champion MMA USKBA chez les 205 livres.\r\n\r\nEst-ce que tu as des idoles? Anderson Silva, Fedor Emelianenko, Muhammed Ali\r\n\r\nQu'est-ce que \u00e7a repr\u00e9sente pour toi de te battre \u00e0 l'UFC? C'est une belle occasion pour moi consid\u00e9rant mon jeune \u00e2ge et le fait que je ne pratique pas les arts martiaux mixtes depuis longtemps.  Je suis tr\u00e8s enthousiasm\u00e9 de faire partie de l'UFC. \r\n\r\nR\u00e9alisations dans les sports amateurs? Champion national de lutte JUCO, All-American en lutte gr\u00e9co-romaine, Champion de l'\u00e9tat de New-York.\r\n\r\nR\u00e9alisations dans les sports professionnels? Champion USKBA des 205 livres.\r\n\r\nTechnique favorite en grappling : N'importe quelle technique qui ferait taper mon adversaire.\r\n\r\nTechnique favorite en position debout : N'importe quelle technique qui mettrait mon adversaire KO.", 
+    "auteur": "hamidebirba", 
+    "date": "2013-10-31T19:28:22.493Z", 
+    "titre": "jon-jones"
+  }
+},
+{
+  "pk": 1, 
+  "model": "blog.match", 
+  "fields": {
+    "nom": "Jones-Cruz", 
+    "categorie": 3, 
+    "contenu": "Dans le cadre de la coupe Poids Moyen Jon Jones va se battre contre Dominick Cruz, le combat est pr\u00e9vu pour le 24/11/2013. Le combat aura lieu \u00e0 Ivry-Sur-Seine.", 
+    "label": "Jon Jones vs Dominick Cruz"
+  }
+},
+{
+  "pk": 2, 
+  "model": "blog.match", 
+  "fields": {
+    "nom": "johnson-st-pierre", 
+    "categorie": 1, 
+    "contenu": "Dans le cadre de la coupe Poids L\u00e9ger Demetrious Johnson va se battre contre Georges St Pierre, le combat est pr\u00e9vu pour le 24/11/2013. Le combat aura lieu \u00e0 Ivry-Sur-Seine.", 
+    "label": "Demetrious Johnson vs Georges St Pierre"
+  }
+},
+{
+  "pk": 3, 
+  "model": "blog.match", 
+  "fields": {
+    "nom": "weidman-velasquez", 
+    "categorie": 2, 
+    "contenu": "Dans le cadre de la coupe Poids Lourd Chris Weidman va se battre contre Cain Velasquez, le combat est pr\u00e9vu pour le 24/11/2013. Le combat aura lieu \u00e0 Ivry-Sur-Seine.", 
+    "label": "Chris Weidman vs Cain Velasquez"
+  }
+},
+{
+  "pk": 1, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_permission", 
+    "name": "Can add permission", 
+    "content_type": 1
+  }
+},
+{
+  "pk": 2, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_permission", 
+    "name": "Can change permission", 
+    "content_type": 1
+  }
+},
+{
+  "pk": 3, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_permission", 
+    "name": "Can delete permission", 
+    "content_type": 1
+  }
+},
+{
+  "pk": 4, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_group", 
+    "name": "Can add group", 
+    "content_type": 2
+  }
+},
+{
+  "pk": 5, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_group", 
+    "name": "Can change group", 
+    "content_type": 2
+  }
+},
+{
+  "pk": 6, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_group", 
+    "name": "Can delete group", 
+    "content_type": 2
+  }
+},
+{
+  "pk": 7, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_user", 
+    "name": "Can add user", 
+    "content_type": 3
+  }
+},
+{
+  "pk": 8, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_user", 
+    "name": "Can change user", 
+    "content_type": 3
+  }
+},
+{
+  "pk": 9, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_user", 
+    "name": "Can delete user", 
+    "content_type": 3
+  }
+},
+{
+  "pk": 10, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_contenttype", 
+    "name": "Can add content type", 
+    "content_type": 4
+  }
+},
+{
+  "pk": 11, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_contenttype", 
+    "name": "Can change content type", 
+    "content_type": 4
+  }
+},
+{
+  "pk": 12, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_contenttype", 
+    "name": "Can delete content type", 
+    "content_type": 4
+  }
+},
+{
+  "pk": 13, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_session", 
+    "name": "Can add session", 
+    "content_type": 5
+  }
+},
+{
+  "pk": 14, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_session", 
+    "name": "Can change session", 
+    "content_type": 5
+  }
+},
+{
+  "pk": 15, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_session", 
+    "name": "Can delete session", 
+    "content_type": 5
+  }
+},
+{
+  "pk": 16, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_site", 
+    "name": "Can add site", 
+    "content_type": 6
+  }
+},
+{
+  "pk": 17, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_site", 
+    "name": "Can change site", 
+    "content_type": 6
+  }
+},
+{
+  "pk": 18, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_site", 
+    "name": "Can delete site", 
+    "content_type": 6
+  }
+},
+{
+  "pk": 19, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_comment", 
+    "name": "Can add comment", 
+    "content_type": 7
+  }
+},
+{
+  "pk": 20, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_comment", 
+    "name": "Can change comment", 
+    "content_type": 7
+  }
+},
+{
+  "pk": 21, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_comment", 
+    "name": "Can delete comment", 
+    "content_type": 7
+  }
+},
+{
+  "pk": 22, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "can_moderate", 
+    "name": "Can moderate comments", 
+    "content_type": 7
+  }
+},
+{
+  "pk": 23, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_commentflag", 
+    "name": "Can add comment flag", 
+    "content_type": 8
+  }
+},
+{
+  "pk": 24, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_commentflag", 
+    "name": "Can change comment flag", 
+    "content_type": 8
+  }
+},
+{
+  "pk": 25, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_commentflag", 
+    "name": "Can delete comment flag", 
+    "content_type": 8
+  }
+},
+{
+  "pk": 26, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_logentry", 
+    "name": "Can add log entry", 
+    "content_type": 9
+  }
+},
+{
+  "pk": 27, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_logentry", 
+    "name": "Can change log entry", 
+    "content_type": 9
+  }
+},
+{
+  "pk": 28, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_logentry", 
+    "name": "Can delete log entry", 
+    "content_type": 9
+  }
+},
+{
+  "pk": 29, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_categorie", 
+    "name": "Can add categorie", 
+    "content_type": 10
+  }
+},
+{
+  "pk": 30, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_categorie", 
+    "name": "Can change categorie", 
+    "content_type": 10
+  }
+},
+{
+  "pk": 31, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_categorie", 
+    "name": "Can delete categorie", 
+    "content_type": 10
+  }
+},
+{
+  "pk": 32, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_article", 
+    "name": "Can add article", 
+    "content_type": 11
+  }
+},
+{
+  "pk": 33, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_article", 
+    "name": "Can change article", 
+    "content_type": 11
+  }
+},
+{
+  "pk": 34, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_article", 
+    "name": "Can delete article", 
+    "content_type": 11
+  }
+},
+{
+  "pk": 35, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_match", 
+    "name": "Can add match", 
+    "content_type": 12
+  }
+},
+{
+  "pk": 36, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_match", 
+    "name": "Can change match", 
+    "content_type": 12
+  }
+},
+{
+  "pk": 37, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_match", 
+    "name": "Can delete match", 
+    "content_type": 12
+  }
+},
+{
+  "pk": 38, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_commentaire", 
+    "name": "Can add commentaire", 
+    "content_type": 13
+  }
+},
+{
+  "pk": 39, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_commentaire", 
+    "name": "Can change commentaire", 
+    "content_type": 13
+  }
+},
+{
+  "pk": 40, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_commentaire", 
+    "name": "Can delete commentaire", 
+    "content_type": 13
+  }
+},
+{
+  "pk": 41, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "add_commentairematch", 
+    "name": "Can add commentairematch", 
+    "content_type": 14
+  }
+},
+{
+  "pk": 42, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "change_commentairematch", 
+    "name": "Can change commentairematch", 
+    "content_type": 14
+  }
+},
+{
+  "pk": 43, 
+  "model": "auth.permission", 
+  "fields": {
+    "codename": "delete_commentairematch", 
+    "name": "Can delete commentairematch", 
+    "content_type": 14
+  }
+},
+{
+  "pk": 1, 
+  "model": "auth.user", 
+  "fields": {
+    "username": "admin", 
+    "first_name": "", 
+    "last_name": "", 
+    "is_active": true, 
+    "is_superuser": true, 
+    "is_staff": true, 
+    "last_login": "2013-11-01T00:32:37.271Z", 
+    "groups": [], 
+    "user_permissions": [], 
+    "password": "pbkdf2_sha256$10000$v79UJhUabxsh$bYyFTs++Iu+mwiQw+49sYEK25yzUahqWNLrNOYn67Ac=", 
+    "email": "hamide@et.esiea.fr", 
+    "date_joined": "2013-10-31T19:04:20.499Z"
+  }
+},
+{
+  "pk": 1, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:07:39.507Z", 
+    "object_repr": "poids-leger", 
+    "object_id": "1", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 10
+  }
+},
+{
+  "pk": 2, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:07:47.394Z", 
+    "object_repr": "poids-lourd", 
+    "object_id": "2", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 10
+  }
+},
+{
+  "pk": 3, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:07:53.702Z", 
+    "object_repr": "poids-moyen", 
+    "object_id": "3", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 10
+  }
+},
+{
+  "pk": 4, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:18:42.854Z", 
+    "object_repr": "demetrious-johnson", 
+    "object_id": "1", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 5, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:20:03.583Z", 
+    "object_repr": "georges-st-pierre", 
+    "object_id": "2", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 6, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:24:30.590Z", 
+    "object_repr": "cain-velasquez", 
+    "object_id": "3", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 7, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:26:36.727Z", 
+    "object_repr": "chris-weidman", 
+    "object_id": "4", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 8, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:27:33.580Z", 
+    "object_repr": "dominick-cruz", 
+    "object_id": "5", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 9, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:28:22.498Z", 
+    "object_repr": "jon-jones", 
+    "object_id": "6", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 11
+  }
+},
+{
+  "pk": 10, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:32:46.644Z", 
+    "object_repr": "Jones-Cruz", 
+    "object_id": "1", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 12
+  }
+},
+{
+  "pk": 11, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:34:11.986Z", 
+    "object_repr": "johnson-st-pierre", 
+    "object_id": "2", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 12
+  }
+},
+{
+  "pk": 12, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 1, 
+    "action_time": "2013-10-31T19:35:04.081Z", 
+    "object_repr": "weidman-velasquez", 
+    "object_id": "3", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 12
+  }
+},
+{
+  "pk": 13, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 2, 
+    "action_time": "2013-10-31T19:35:12.090Z", 
+    "object_repr": "johnson-st-pierre", 
+    "object_id": "2", 
+    "change_message": "Modifi\u00e9 contenu.", 
+    "user": 1, 
+    "content_type": 12
+  }
+},
+{
+  "pk": 14, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 3, 
+    "action_time": "2013-11-01T00:33:14.657Z", 
+    "object_repr": "cf", 
+    "object_id": "1", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 13
+  }
+},
+{
+  "pk": 15, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 3, 
+    "action_time": "2013-11-01T02:54:49.096Z", 
+    "object_repr": "test", 
+    "object_id": "3", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 13
+  }
+},
+{
+  "pk": 16, 
+  "model": "admin.logentry", 
+  "fields": {
+    "action_flag": 3, 
+    "action_time": "2013-11-01T02:54:49.192Z", 
+    "object_repr": "test", 
+    "object_id": "2", 
+    "change_message": "", 
+    "user": 1, 
+    "content_type": 13
+  }
+}
+]
