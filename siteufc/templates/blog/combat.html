@@ -9,7 +9,7 @@
  
 {% for commentairematch in tous_commentaires %}
  <div class = "commentairematch">
-   <h3>Posté par {{ commentairematch.auteur }} à {{commentairematch.date}} </h3>
+   <h3>Posté par {{ commentairematch.auteur }} le {{commentairematch.date}} </h3>
    <p>{{ commentairematch.contenu|linebreaks }}</p>
  </div>
  {% empty %}
