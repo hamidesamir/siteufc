@@ -14,6 +14,29 @@
 			<hgroup id="banniere">
 			</hgroup>	
 	</header>
+	<div id="menuprincipal">
+        <nav>
+        <p> <center> <p>
+           <ul>
+           <li><a href="{% url "blog.views.actu" %}"><mark>L'actualité'</mark></a></li>
+           <li><a href="{% url "blog.views.combattants" %}"><mark>Combattants</mark></a>
+              <ul>    
+               <li><a href="{% url "blog.views.article" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
+               <li><a href="{% url "blog.views.article" 'poids-moyen' %}"><mark>Poids moyen</mark></a></li> 
+               <li><a href="{% url "blog.views.article" 'poids-lourd' %}"><mark>Poids lourd</mark></a></li>
+              </ul>
+           </li>
+           <li><li><a href="{% url "blog.views.accueilmatch" %}"><mark>Matchs</mark></a>
+              <ul>    
+               <li><a href="{% url "blog.views.match" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
+               <li><a href="{% url "blog.views.match" 'poids-moyen' %}"><mark>Poids moyen</mark></a></li> 
+               <li><a href="{% url "blog.views.match" 'poids-lourd' %}"><mark>Poids lourd</mark></a></li>
+              </ul>
+           </li>
+           </ul>
+          </p></center></p>  
+         </nav>
+         </div>
 	
 	<!-- page d'accueil -->
 	<section id="actu">
