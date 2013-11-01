@@ -1,37 +1,19 @@
 <!DOCTYPE HTML >
 <!-- Projet Web 5a ESIEA #Birba #Hamide -->
-<HTML>
-   <HEAD>
+<html>
+   <head>
 	<meta charset="utf-8" />
 	<TITLE>UFC Projet Web</TITLE> <!--titre de l'onglet du navigateur-->
 	<link rel="stylesheet" href="/assets/style2.css"/> 
-   </HEAD>
+	<script src="/assets/clock.js"></script>
+   </head>
 
  <hgroup id = "fond-blanc">
   <body id = "contenu" >
 	<header>
-		<div id="menuprincipal">
-			<nav>
-			  	<ul>
-					<li><a href="{% url "blog.views.actu" %}"><mark>L'actualité'</mark></a></li>
-					
-					<li><a href="{% url "blog.views.combattants" %}"><mark>Combattants</mark></a>
-						<ul>		
-							<li><a href="{% url "blog.views.article" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
-							<li><a href="{% url "blog.views.article" 'poids-moyen' %}"><mark>Poids moyen</mark></a></li> 
-							<li><a href="{% url "blog.views.article" 'poids-lourd' %}"><mark>Poids lourd</mark></a></li>
-						</ul>
-					</li>
-					<li><li><a href="{% url "blog.views.accueilmatch" %}"><mark>Matchs</mark></a>
-						<ul>		
-							<li><a href="{% url "blog.views.match" 'poids-leger' %}"><mark>Poids léger</mark></a></li>
-							<li><a href="{% url "blog.views.match" 'poids-moyen' %}"><mark>Poids moyen</mark></a></li> 
-							<li><a href="{% url "blog.views.match" 'poids-lourd' %}"><mark>Poids lourd</mark></a></li>
-						</ul>
-					</li>
-				</ul>
-	  		</nav>			
-		</div>
+			<hgroup id="banniere">
+				<img src="/assets/UFC3_Hero.jpg"/></a>
+			</hgroup>	
 	</header>
 	
 	<!-- page d'accueil -->
@@ -48,4 +30,4 @@
         </footer>
   </body>
  </hgroup>
-</HTML>	
+</html>	
