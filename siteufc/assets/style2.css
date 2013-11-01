@@ -1,8 +1,8 @@
 h1 {
     	font-family: Arial, sans-serif;
-    	color: #FF0000; /* couleur rouge*/
-	text-align : center ; /* centrer le text à gauche */
-	text-shadow: 2px 2px 40px white; /* donne un effet d'ombre sur les lettres d'une balise de type block*/
+    	color: #FF0000; 
+	text-align : center ; 
+	text-shadow: 2px 2px 40px white; 
 }
 
 #banniere{
@@ -72,6 +72,7 @@ body{
 }
 
 footer{
+	text-align:center;
 	font-style:italic;
 }
 
