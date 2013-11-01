@@ -13,7 +13,7 @@
  
  {% for commentairearticle in tous_commentaires %}
  <div class = "commentairearticle">
-   <h3>{{ commentairearticle.auteur }} </h3>
+   <h3> Posté par {{ commentairearticle.auteur }} à {{commentairearticle.date}}</h3>
    <p>{{ commentairearticle.contenu|linebreaks }}</p>
  </div>
  {% empty %}
