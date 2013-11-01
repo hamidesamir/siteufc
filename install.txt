@@ -34,9 +34,19 @@ Installez également un éditeur de texte tel que vim à l'aide de la commande "
 
 - Placez vous sur le répertoire home/progweb/siteufc/siteufc, vous devriez trouver à cet emplacement le fichier "data.json"
 
+- Tapez la commande "su - postgres"
+
+- Créez un user avec la commande "create user -P" l'identifiant sera "admin", le password sera "progweb". Répondre ensuite par "n" aux 3 questions
+
+- Créez la base de données en tapant la commande "createdb ufc"
+
+- Tapez "logout" pour vous déconnecter
+
+- Créez les tables de la base de donnée : "python manage.py syncdb"
+
 - Importez la base de donnée : "python manage.py loaddata data.json"
 
-- Synchronisez la base de donnée : "python manage.py syncdb"
+
 
 6. Installation Gunicorn
 
