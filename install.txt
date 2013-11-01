@@ -12,6 +12,8 @@ Installez également un éditeur de texte tel que vim à l'aide de la commande "
 
 - Placez vous sur le dossier home/progweb/ 
 
+- Installez git : "sudo apt-get install git-core"
+
 - Une fois placé sur le dossier progweb, faire un clone du projet avec la commande "git clone https://github.com/hamidesamir/siteufc/"
 
 3. Installation Django
