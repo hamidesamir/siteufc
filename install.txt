@@ -32,9 +32,9 @@ Installez également un éditeur de texte tel que vim à l'aide de la commande "
 
 5. Importation de la base de données
 
-- Placez vous sur le répertoire home/progweb/siteufc/siteufc, vous devriez trouver à cet emplacement le fichier "database.json"
+- Placez vous sur le répertoire home/progweb/siteufc/siteufc, vous devriez trouver à cet emplacement le fichier "data.json"
 
-- Importez la base de donnée : "python manage.py loaddata database.json"
+- Importez la base de donnée : "python manage.py loaddata data.json"
 
 - Synchronisez la base de donnée : "python manage.py syncdb"
 
