@@ -5,18 +5,23 @@
 {% block content %}
 
  <div class = "categorie">
-   <h1> Explication UFC</h1>
-   <p>L'UFC etc etc.. </p>
+   <h2> Qu'est ce que l'UFC</h2>
+   <p>L'Ultimate Fighting Championship est le plus grand des championnaux de MMA au monde !! Il rassemble les meilleurs combattants du monde </p>
+   
+   
 {% for categorie in toutes_categorie %}
-   <p> <a href="{% url "blog.views.article" categorie.nom %}">{{ categorie.label }}</a> </p>
+   <p> Vous trouverez ci dessous les fiches de combattants selon leur catégorie : </p>
+   <p> <a href="{% url "blog.views.article" categorie.nom %}"> Combattants {{ categorie.label }}</a> </p>
  </div>
  {% empty %}
   <p> Aucune categorie </p>
 {% endfor %}
 
+
 <div class ="match">
 {% for match in tout_match %}
- <p> <a href="{% url "blog.views.match" match.categorie.nom %}">{{ match.label }}</a><p>
+ <p> Vous trouverez ci dessous les prochains combats : </p>
+ <p> <a href="{% url "blog.views.match" match.categorie.nom %}">Prochain match {{ match.label }}</a><p>
 </div>
 {% empty %}
  <p> Aucun match </p>
