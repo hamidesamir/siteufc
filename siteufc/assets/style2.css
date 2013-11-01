@@ -2,11 +2,15 @@ h1 {
     	font-family: Arial, sans-serif;
     	font-size: 3.3em;
     	color: #FF0000; /* couleur rouge*/
-	text-align : left ; /* centrer le text à gauche */
+	text-align : center ; /* centrer le text à gauche */
 	text-shadow: 2px 2px 40px white; /* donne un effet d'ombre sur les lettres d'une balise de type block*/
 }
 
-
+#banniere{
+	margin:auto;
+	background-image:url(UFC3.jpg);
+	
+}
 
 body{
 	margin: 10px 0px 10px 0px;
