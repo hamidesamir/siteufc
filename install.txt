@@ -1,0 +1,63 @@
+L'installation se fait de la manière suivante :
+
+1. Pré-requis
+
+Avant de commencer l'installation, il est préférable de mettre à jour notre système avec les commandes suivantes :
+sudo apt-get update
+sudo apt-get upgrade
+
+Installez également un éditeur de texte tel que vim à l'aide de la commande "sudo apt-get install vim"
+
+2. Récupérattion du projet
+
+- Placez vous sur le dossier home/progweb/ 
+
+- Une fois placé sur le dossier progweb, faire un clone du projet avec la commande "git clone https://github.com/hamidesamir/siteufc/"
+
+3. Installation Django
+
+- Installez le gestionnaire d'installation python avec la commande suivante "sudo apt-get install python-pip"
+
+- Installez ensuite Django avec la commande suivante "pip install django"
+
+4. Installation PostgreSQL
+
+- Installez le gestionnaire de base de données avec la commande suivante : "sudo apt-get install postgresql postgresql-contrib"
+
+- Installez ensuite les dépendances pour que PostgreSQL puisse fonctionner avec Django : "sudo apt-get libpq-dev python-dev"
+
+- Installer ensuite psycopg2 : "pip install psycopg2"
+
+5. Importation de la base de données
+
+- Placez vous sur le répertoire home/progweb/siteufc/siteufc, vous devriez trouver à cet emplacement le fichier "database.json"
+
+- Importez la base de donnée : "python manage.py loaddata database.json"
+
+- Synchronisez la base de donnée : "python manage.py syncdb"
+
+6. Installation Gunicorn
+
+- Installez gunicorn : "pip install gunicorn"
+
+7. Installation Nginx
+
+- Installez nginx : "sudo apt-get install nginx"
+
+8. Configuration Nginx
+
+- Placez vous dans le dossier home/progweb/siteufc/siteufc, vous devriez retrouver le fichier "example"
+
+- Copier le fichier "example" à l'emplacement etc/nginx/sites-enabled
+
+- Dans le fichier "example" modifier l'adresse "192.168.0.107" par votre adresse IP aux deux emplacements où l'adresse est écrite 
+
+7. Lancement de l'application
+
+- Enregistrez le fichier puis retournez sur le répertoire home/progweb/siteufc/siteufc 
+
+- Lancez nginx : "sudo service nginx start"
+
+- Lancez gunicorn : "gunicorn siteufc.wsgi:application --bind 192.168.0.107:8001" (remplacez 192.168.0.107 par votre adresse IP)
+
+- Placez vous sur votre browser et tapez "192.168.0.107:8000" (remplacez 192.168.0.107 par votre adresse IP)
